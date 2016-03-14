@@ -1,50 +1,102 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width,initial-scale=1.0" name="viewport">
-    <title>Web Chat &copy; Dudnikov</title>
-    <link href="/src/css.css" rel="stylesheet">
-	<link href="css.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script type="text/javascript" src="/src/index.js"></script>
+  <script type="text/javascript" src="/src/reg.js"></script>
+  <link rel="stylesheet" type="text/css" href="/src/index.css">
+  
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Dudnikov chat &copy;</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
-<div class="container">
-    <nav class="sidebar">
-         <h4>Sidebar 1</h4>
-    </nav>
-    <div class="flex-cloumn">
-    <div class="logo"><img src="/src/Logo.png" alt="LOGO"></div>
-    <div class="main">
-        <h2>This is the main content</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-               elit. Earum sequi nisi aliquam, ipsum tempore illo
-               recusandae. Odit consectetur totam hic eius, commodi
-               molestiae voluptates porro vel laboriosam, tempore,
-               nostrum quis. Lorem ipsum dolor sit amet, consectetur
-               adipisicing elit. Dignissimos mollitia vero facilis,deserunt omnis, fugit quod nam, neque iusto
-               reprehenderit tempora. Atque fuga inventore perferendis
-               harum et culpa repudiandae, laudantium. Lorem ipsum
-               dolor sit amet, consectetur adipisicing elit. Assumenda
-               dolorum ea at nobis dolores doloremque incidunt
-               voluptate, dignissimos, veniam soluta temporibus sint
-               error odit nesciunt ducimus excepturi quam, itaque eos!
-               Lorem ipsum dolor sit amet, consectetur adipisicing
-               elit. Ex, molstiae, delectus nemo quibusdam odit
-               fugiat velit facilis soluta odio ipsam ullam alias
-               repellat. Ipsam porro voluptate adipisci nihil
-               assumenda, ab.</p>
-    </div>
 
-    <div>
-        <div class="msg">
-                    <button class="button_file">+</button>
-                    <input class="text_Form" type="text"/>
-                    <button class="btn_Sub">Send</button>
-        </div>
+    <div class="container">
+        <div class="flat-form">
+            <ul class="tabs">
+                <li>
+                    <a href="#login" class="active">Login</a>
+                </li>
+                <li>
+                    <a href="#register">Register</a>
+                </li>
+            </ul>
+            <div id="login" class="form-action show">
+                <h1>Login to Chat</h1>
+                Hi! Let`s login to this beautiful app.
+                <br>
+                <br>
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" id="email-l" placeholder="Email" />
+                        </li>
+                        <li>
+                            <input type="password" id="password-l"placeholder="Password" />
+                        </li>
+                        <li>
+                            <input type="button" value="Login" class="button" onkeypress="return login()"" "onclick="login()" />
+                        </li>
+                    </ul>
+                </form>
+                <script type="text/javascript">
+                     $('#password-l').keypress(function (e) {
+                        if (e.keyCode == 13) {
+                            login();
+                            }
+                        });
+                </script>
+            </div>
+            <!--/#login.form-action-->
+            <div id="register" class="form-action hide">
+                <h1>Register</h1>
+                <p>
+                    Hello! You must to sign up in my chat
+                    application!
+                </p>
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" id="email-r" placeholder="Email" />
+                        </li>
+                        <li>
+                            <input type="password" id="password-r" placeholder="Password" />
+                        </li>
+                        <li>
+                            <input type="text" id="username" placeholder="Username" />
+                        </li>
+                        
+                        <li>
+                            <input type="button" value="Sign Up" class="button" onclick="reg()" />
+                        </li>
+                    </ul>
+                </form>
+                <script type="text/javascript">
+                     $('#username').keypress(function (e) {
+                        if (e.keyCode == 13) {
+                            reg();
+                            }
+                        });
+                </script>
+            </div>
         </div>
     </div>
-    </div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="/src/index.js"></script>>
+    <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 </body>
 </html>
