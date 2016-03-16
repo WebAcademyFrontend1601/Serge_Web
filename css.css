@@ -44,41 +44,38 @@ table {
     border-spacing: 0;
 }
 /*CSS -----------------------------------RESET-------------------------------------FINISH*/
-html{height: 100%;}
+html{height: 100%; }
 body{height: 100%;}
-
-.container {
-    display: -webkit-flex;
-    display: flex;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin: 0px;
-}
-.sidebar
-{
-    background-color: yellow; 
-    width: 20%; height: 100%; 
+.sidebar{
     position: fixed;
+    width: 20%;
+    height: 100%;
+    background-color: yellow;
 }
+
 
 .logo
 {   
-
-    background-color: deepskyblue; 
-    margin-left:20% 
-    width: 80%; 
-    height: 15%
     position: fixed;
-    
+    width: 80%;
+    height: 50px;
+    margin-left: 20%;
+    background-color: deepskyblue;
+
+}
+.logo img {
+    display: block;
+    margin-left: 40%;
+
 }
 .main
 {
     background-color: indianred;
      margin-left: 20%;
      width: 80%; 
-     height: 75%;
-     position: static;
-     overflow-y: auto;
+     height: 2500;
+     padding-top: 50px;
+     padding-bottom: 50px;
 
 }
 .msg
@@ -98,24 +95,15 @@ body{height: 100%;}
     
 }
 
-.flex-column {
-    -webkit-flex: 1;
-    flex: 1;
-}
 
-.logo img {
-    display: block;
-    margin-left: 55%;
-    margin-right: 45%;
-}
 .text_Form
     { 
     background: white; 
     border: 1px solid #ffa853; 
     border-radius: 5px; 
     box-shadow: 0 0 5px 3px #ffa853; 
-    /*color: #666;*/ 
-    /*outline: none; */
+    color: #666;
+    outline: none; 
     height: 30px; 
     width: 90%; 
     margin: 5px;
@@ -178,7 +166,7 @@ body{height: 100%;}
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9f9f9",endColorstr="#e9e9e9");
 }
 
-.button_file:hover {
+/*.button_file:hover {
     background: -webkit-linear-gradient(0deg, #f9f9f9 0%, #e9e9e9 11%);
     background: -moz-linear-gradient(0deg, #f9f9f9 0%, #e9e9e9 11%);
     background: -ms-linear-gradient(0deg, #f9f9f9 0%, #e9e9e9 11%);
@@ -189,7 +177,7 @@ body{height: 100%;}
 .button_file:active {
     position:relative;
     top: 1px;
-}
+}*/
 
 /*.sidebar {
     display: flex;
